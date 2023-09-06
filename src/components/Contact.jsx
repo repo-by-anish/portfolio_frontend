@@ -4,7 +4,7 @@ import { AiOutlineSend } from "react-icons/ai"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { HiOutlineMail } from "react-icons/hi"
 import axios from "axios"
-const BASE_URI = "http://localhost:3500/message"
+const BASE_URI = "https://portfolio-backend-1.onrender.com/message"
 const Contact = ({ animStyle }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
