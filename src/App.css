@@ -10,11 +10,15 @@
   display: flex;
 }
 
+button{
+  cursor: pointer;
+}
+
 
 
 .gen__head_comp h2{
   margin: 0;
-  font-family: 'poppins';
+  font-family: 'poppins',sans-serif;
   font-size: 40px;
   line-height: 40px;
   font-weight: 500;

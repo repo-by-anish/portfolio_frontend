@@ -121,7 +121,7 @@ const MainBody = () => {
                     </div>
                     <div className="cont__item">
                         <div className="c_logo_item">
-                            <button className="button__gen"><BiDownload onClick={handleDownloadClick} style={{ paddingRight: "5px" }} color="#fff" size={"1rem"} /> Download Resume</button>
+                            <button onClick={handleDownloadClick} className="button__gen"><BiDownload onClick={handleDownloadClick} style={{ paddingRight: "5px" }} color="#fff" size={"1rem"} /> Download Resume</button>
                         </div>
                     </div>
                 </div>
