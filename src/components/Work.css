@@ -1,0 +1,75 @@
+
+
+.work__body{
+    background-image: url("../../public/images/worlbg.jpg");
+    background-repeat: no-repeat;
+    min-height:100% ;
+    background-size: cover;
+}
+.project__container {
+    padding: 1rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project__container a {
+    color: #4c4b4a;
+    text-decoration: none;
+}
+
+.project_item {
+    width: min-content;
+    backdrop-filter: blur(7px);
+    border: 2px solid #1a100335;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    border-radius: 8px;
+    margin: 0 1.5rem 1.5rem 0;
+}
+
+.app__name {
+    color: #ffff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-family: 'poppins',;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.app__about {
+    font-size: 14px;
+    margin-top: 0.4rem;
+    font-family: 'poppins',sans-serif;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.project_item img {
+    width: 215px;
+    height: 95px;
+    opacity: 0.7;
+    border-radius: 8px;
+    border: 1px solid #4c4b4a3b;
+}
+.project_item img:hover {
+    opacity: 1;
+    transition: 300ms all;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 400px){
+    .work__body{
+        border-radius: 8px;
+    }
+    .project_item {
+        width: min-content;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        border-radius: 8px;
+        margin: 0.5rem auto;
+    }
+}
+
+/* Responsive styles */

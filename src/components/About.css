@@ -1,0 +1,79 @@
+.about__body {
+    margin: 0;
+    padding: 1rem 3rem;
+}
+
+.about__text {
+    margin: 5px 0;
+}
+
+.work__catelog {
+    display: grid;
+    background-image: url("../../public/images/contactbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem 3rem;
+    overflow: hidden;
+    height: calc(418px - 1rem);
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.catelog__item {
+    border-radius: 10px;
+    background: transparent;
+    color: #F2F7FC;
+    backdrop-filter: blur(7px);
+    border: 2px solid #0000002e;
+    padding: 1.3rem 0 0 1.5rem;
+}
+
+.cat__title{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    justify-content: space-between;
+}
+.cat__title h4{
+    font-family: 'poppins';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 0 0.3rem;
+}
+
+.cat_description{
+    line-height: 20px;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+/* Mobile Device */
+
+@media screen and (max-width: 400px) {
+    .work__catelog {
+        background-position: bottom right;
+        padding: 1rem 1rem;
+        grid-template-columns: auto;
+        border-radius: 0 0 8px 8px;
+        height: 100%;
+    }
+    .about__body {
+        margin: 0;
+        padding: 1rem 1rem;
+    }
+
+    .work__catelog {
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+
+    .work__catelog {
+        gap: 1rem;
+    }
+}
+/* Mobile Device */
