@@ -3,6 +3,16 @@
     position: relative;
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .contact__top {
     padding: 20px 40px;
     display: grid;
@@ -157,6 +167,24 @@
     border: 1px solid #EE2C0B;
 }
 
+.loding {
+    width: 100%;
+    z-index: 3;
+    height: 100%;
+    position: absolute;
+    background-color: #f2f7fc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.loding img {
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 400px) {
     .contact__top {
@@ -181,6 +209,7 @@
         border-bottom: 2px solid #0b09093a;
         width: auto;
     }
-    
+
 }
+
 /* Responsive Styles */

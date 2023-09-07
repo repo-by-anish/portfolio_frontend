@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./Contact.css"
 import { AiOutlineSend } from "react-icons/ai"
 import { BiSolidPhoneCall } from "react-icons/bi"
@@ -9,9 +9,24 @@ const Contact = ({ animStyle }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-
+    const [sResp,setsResp]=useState(false);
+    
+    useEffect(()=>{
+        const op=async()=>{
+            try {
+                const response = await axios.get(BASE_URI)
+                setsResp(response.status === 200)
+            } catch (error) {
+                alert("Invalid Data");
+                console.error(error)
+                return false
+            }
+        }
+        op();
+    },[])
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setsResp(false);
 
         const data = {
             name,
@@ -22,21 +37,27 @@ const Contact = ({ animStyle }) => {
             const response = await axios.post(BASE_URI, data)
             if (response.status === 200) {
                 alert("message sent successfully");
-            }else{
+            } else {
                 alert("sommething went wrong");
             }
             setName("")
             setEmail("")
             setMessage("")
+            setsResp(true)
         } catch (error) {
             console.error(error)
             alert("Invalid Data");
         }
     }
 
+    const loading =
+        <div style={!sResp?{display:"auto"}:{display:"none"}} className="loding">
+            <img src="images/load.png" alt="" />
+        </div>
 
     return (
-        <div className={animStyle + " conatct__body"}>
+        <div className={"conatct__body"}>
+        {loading}
             <div className="contact__top">
                 <div style={{ backgroundColor: "#FFEED9" }} className="contact__item">
                     <p className="c_heading"><BiSolidPhoneCall color="#EF330B" size={"1.6rem"} />Email:</p>
