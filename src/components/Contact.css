@@ -173,9 +173,7 @@
     height: 100%;
     position: absolute;
     background-color: #f2f7fc;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
 }
 
 .loding img {

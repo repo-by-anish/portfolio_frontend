@@ -9,10 +9,10 @@ const Contact = ({ animStyle }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [sResp,setsResp]=useState(false);
-    
-    useEffect(()=>{
-        const op=async()=>{
+    const [sResp, setsResp] = useState(false);
+
+    useEffect(() => {
+        const op = async () => {
             try {
                 const response = await axios.get(BASE_URI)
                 setsResp(response.status === 200)
@@ -23,10 +23,10 @@ const Contact = ({ animStyle }) => {
             }
         }
         op();
-    },[])
+    }, [])
     const handleSubmit = async (e) => {
-        e.preventDefault();
         setsResp(false);
+        e.preventDefault();
 
         const data = {
             name,
@@ -51,13 +51,13 @@ const Contact = ({ animStyle }) => {
     }
 
     const loading =
-        <div style={!sResp?{display:"auto"}:{display:"none"}} className="loding">
+        <div style={!sResp ? { display: "auto" } : { display: "none" }} className="loding">
             <img src="images/load.png" alt="" />
         </div>
 
     return (
         <div className={"conatct__body"}>
-        {loading}
+            {loading}
             <div className="contact__top">
                 <div style={{ backgroundColor: "#FFEED9" }} className="contact__item">
                     <p className="c_heading"><BiSolidPhoneCall color="#EF330B" size={"1.6rem"} />Email:</p>
