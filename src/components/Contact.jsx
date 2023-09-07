@@ -10,7 +10,7 @@ const Contact = ({ animStyle }) => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [sResp, setsResp] = useState(false);
-
+    const [buttonStatus,setButtonState]=useState(false)
     useEffect(() => {
         const op = async () => {
             try {
@@ -24,10 +24,12 @@ const Contact = ({ animStyle }) => {
         }
         op();
     }, [])
-    const handleSubmit = async (e) => {
-        setsResp(false);
-        e.preventDefault();
 
+    // Icons Names
+    const sendIcon = <AiOutlineSend style={{ marginLeft: "5px" }} />
+
+
+    const sendMessage = async () => {
         const data = {
             name,
             email,
@@ -37,6 +39,7 @@ const Contact = ({ animStyle }) => {
             const response = await axios.post(BASE_URI, data)
             if (response.status === 200) {
                 alert("message sent successfully");
+                setButtonState(false)
             } else {
                 alert("sommething went wrong");
             }
@@ -50,10 +53,28 @@ const Contact = ({ animStyle }) => {
         }
     }
 
+
+    const handleSubmit = (e) => {
+        setButtonState(true)
+        e.preventDefault();
+        if (!buttonStatus) {
+            sendMessage()
+        } else {
+            console.log("Updater Not Works");
+        }
+    }
+
     const loading =
         <div style={!sResp ? { display: "auto" } : { display: "none" }} className="loding">
             <img src="images/load.png" alt="" />
         </div>
+
+        let sendButton=null
+        if (buttonStatus) {
+            sendButton=<button>Sending....</button>
+        }else{
+            sendButton=<button>Send {sendIcon}</button>
+        }
 
     return (
         <div className={"conatct__body"}>
@@ -96,7 +117,7 @@ const Contact = ({ animStyle }) => {
                             <textarea onChange={e => setMessage(e.target.value)} required name="" value={message} id="message"></textarea>
                             <label htmlFor="message">Message</label>
                         </div>
-                        <button>Send<AiOutlineSend style={{ marginLeft: "5px" }} /></button>
+                        {sendButton}
                     </form>
                 </div>
             </div>

@@ -172,12 +172,14 @@
     z-index: 3;
     height: 100%;
     position: absolute;
-    background-color: #f2f7fc;
-    text-align: center;
+    background-color: #f2f7fc79;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .loding img {
-    height: 100px;
+    height: 80px;
     animation-name: rotate;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -207,7 +209,15 @@
         border-bottom: 2px solid #0b09093a;
         width: auto;
     }
+    .loding {
+        display: block;
+        text-align: center;
+    }
 
+    .loding img {
+        margin-top: 200px;
+        height: 50px;
+    }
 }
 
 /* Responsive Styles */
