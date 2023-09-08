@@ -62,7 +62,7 @@ const MainBody = () => {
 
 
     const handleDownloadClick = () => {
-        const googleDriveLink = 'https://drive.google.com/file/d/12Q3BFrjOqf0a1l6X4ArkBfQoWus8CLi1/view?usp=drive_link';
+        const googleDriveLink = 'https://drive.google.com/file/d/1KyqZ3B0vh6KuNX8Noe_khbHikp7IANfq/view?usp=drive_link';
         const anchor = document.createElement('a');
         anchor.href = googleDriveLink;
         anchor.download = 'Anish_resume.pdf';
