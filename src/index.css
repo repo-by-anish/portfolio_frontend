@@ -1,5 +1,6 @@
+
 body {
   padding: 0 4rem;
-  background-color: #f2f5f9;
+  background-color: var(--main_body);
   font-family: 'Raleway';
 }

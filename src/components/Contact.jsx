@@ -1,30 +1,18 @@
-import { useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import "./Contact.css"
 import { AiOutlineSend } from "react-icons/ai"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { HiOutlineMail } from "react-icons/hi"
 import axios from "axios"
+import RespContext from "./RespContext"
 const BASE_URI = "https://portfolio-backend-1.onrender.com/message"
 const Contact = ({ animStyle }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [sResp, setsResp] = useState(false);
-    const [buttonStatus,setButtonState]=useState(false)
-    useEffect(() => {
-        const op = async () => {
-            try {
-                const response = await axios.get(BASE_URI)
-                setsResp(response.status === 200)
-            } catch (error) {
-                alert("Invalid Data");
-                console.error(error)
-                return false
-            }
-        }
-        op();
-    }, [])
-
+    const [buttonStatus, setButtonState] = useState(false)
+    const sResp=useContext(RespContext);
+    console.log(sResp);
     // Icons Names
     const sendIcon = <AiOutlineSend style={{ marginLeft: "5px" }} />
 
@@ -46,7 +34,6 @@ const Contact = ({ animStyle }) => {
             setName("")
             setEmail("")
             setMessage("")
-            setsResp(true)
         } catch (error) {
             console.error(error)
             alert("Invalid Data");
@@ -64,28 +51,25 @@ const Contact = ({ animStyle }) => {
         }
     }
 
-    const loading =
-        <div style={!sResp ? { display: "auto" } : { display: "none" }} className="loding">
-            <img src="images/load.png" alt="" />
-        </div>
+    const loading = <div style={!sResp ? { display: "auto" } : { display: "none" }} className="loding"><img src="images/load.png" alt="" /></div>
 
-        let sendButton=null
-        if (buttonStatus) {
-            sendButton=<button>Sending....</button>
-        }else{
-            sendButton=<button>Send {sendIcon}</button>
-        }
+    let sendButton = null
+    if (buttonStatus) {
+        sendButton = <button>Sending....</button>
+    } else {
+        sendButton = <button>Send {sendIcon}</button>
+    }
 
     return (
-        <div className={"conatct__body"}>
+        <div className={animStyle+" conatct__body"}>
             {loading}
             <div className="contact__top">
-                <div style={{ backgroundColor: "#FFEED9" }} className="contact__item">
+                <div className="contact__item">
                     <p className="c_heading"><BiSolidPhoneCall color="#EF330B" size={"1.6rem"} />Email:</p>
                     <p className="c_content">contact.anish7@gmail.com</p>
                     <p className="c_content">it.20203061@gmail.com</p>
                 </div>
-                <div style={{ backgroundColor: "#F2F7FC" }} className="contact__item">
+                <div className="contact__item">
                     <p className="c_heading"><HiOutlineMail color="#EF330B" size={"1.6rem"} />Phone:</p>
                     <p className="c_content">+91-62065 73987</p>
                     <p className="c_content">+91-62065 73987</p>

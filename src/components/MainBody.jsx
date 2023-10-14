@@ -97,7 +97,7 @@ const MainBody = () => {
                             <MdPhoneIphone color="#F55711" size={"1rem"} />
                         </div>
                         <div className="c__detail">
-                            <span style={{ color: "#1a100382" }}>Phone</span>
+                            <span className="c__title">Phone</span>
                             <span>+91-62065 73987</span>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const MainBody = () => {
                             <BiLogoGmail color="#FF9C1B" size={"1rem"} />
                         </div>
                         <div className="c__detail">
-                            <span style={{ color: "#1a100382" }}>Title</span>
+                            <span className="c__title">Title</span>
                             <span>contact.anish7@gmail.com</span>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ const MainBody = () => {
                             <HiOutlineLocationMarker color="E80505" size={"1rem"} />
                         </div>
                         <div className="c__detail">
-                            <span style={{ color: "#1a100382" }}>Location</span>
+                            <span className="c__title">Location</span>
                             <span>Burdwan, West Bengal</span>
                         </div>
                     </div>

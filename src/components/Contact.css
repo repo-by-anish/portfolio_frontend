@@ -1,3 +1,5 @@
+
+
 .conatct__body {
     margin: 0;
     position: relative;
@@ -22,7 +24,7 @@
 }
 
 .contact__item {
-    background: #000;
+    background: var(--logo_bg);
     min-height: calc(150px - 2rem);
     margin: auto 0;
     padding: 1rem 0.7rem 1rem 2rem;
@@ -50,7 +52,7 @@
 
 .contact__bottom {
     margin-top: auto;
-    background-image: url("../../public/images/contactbg.jpg");
+    background-image: var(--contact_bg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -71,8 +73,8 @@
     align-items: center;
     background: transparent;
     backdrop-filter: blur(7px);
-    border: 2px solid #0b09093a;
-    box-shadow: 0 0 8px #0000002f;
+    border: 2px solid var(--border_light);
+    box-shadow: 0 0 8px var(--primary_box_shado);
 }
 
 .c__b__left {
@@ -81,16 +83,17 @@
     margin: auto 0;
     overflow: hidden;
     padding: 20px;
-    color: #F2F7FC;
 }
 
 .c__b__left h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: var(--primary_bg_dark);
 }
 
 .c__b__left .address {
     margin-bottom: 20px;
+    color: var(--inp_color);
 }
 
 .c__b__left .address h2 {
@@ -101,7 +104,7 @@
 .c__b__right {
     border-radius: 8px;
     padding: 1rem 2rem;
-    border-left: 2px solid #0b09093a;
+    border-left: 2px solid var(--border_light);
     display: block;
     height: calc(100% - 2rem);
     justify-self: center;
@@ -111,7 +114,7 @@
 .input_item {
     position: relative;
     margin: 2rem 0;
-    color: #ffffff76;
+    color: var(--inp_color);
     font-weight: 500;
 }
 
@@ -142,8 +145,8 @@
     background: none;
     border: none;
     font-size: 1rem;
-    color: #fff;
-    border-bottom: 2px solid #ffffff76;
+    color: var(--f_color_d);
+    border-bottom: 2px solid var(--inp_color);
 }
 
 .c__b__right input,
@@ -153,18 +156,18 @@
 }
 
 .contact_message {
-    color: #fff;
+    color: #f2f7f9;
 }
 
 .c__b__right button {
     background-image: linear-gradient(to bottom left, #e8050574, #ff9c1a7d);
     display: flex;
     justify-content: center;
-    color: #ffff;
+    color: var(--f_color_d);
     align-items: center;
     height: 35px;
     border-radius: 8px;
-    border: 1px solid #EE2C0B;
+    border: 1px solid var(--primary_bg_dark);
 }
 
 .loding {
@@ -206,7 +209,6 @@
 
     .c__b__right {
         border-left: none;
-        border-bottom: 2px solid #0b09093a;
         width: auto;
     }
     .loding {

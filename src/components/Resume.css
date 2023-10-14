@@ -1,3 +1,5 @@
+
+
 .resume__body {
     margin: 0;
     box-sizing: border-box
@@ -24,20 +26,20 @@
     display: flex;
 }
 
-.res__body__education{
-    background-image: url("../../public/images/resumebg.jpg");
+.res__body__education {
+    background-image: var(--resume_bg);
     background-repeat: no-repeat;
     background-size: cover;
     height: calc(432px + 1.1rem);
-    color: #F8FBFB;
+    color: var(--img_txt);
     overflow: hidden;
 }
 
 .edication {
     background: transparent;
-    backdrop-filter: blur(7px);
-    border: 2px solid #0b09093a;
-    box-shadow: 6px 6px 8px #0000002f;
+    backdrop-filter: blur(2px);
+    border: 2px solid var(--border_light);
+    box-shadow: 6px 6px 8px var(--border_light);
     padding: 0.3rem 1rem;
     height: calc(115px - 0.6rem);
     border-radius: 10px;
@@ -46,7 +48,7 @@
 
 .session {
     font-size: 14px;
-    color: #504e4da6;
+    color: var(--primary_box_shado);
 }
 
 .school_name {
@@ -58,13 +60,15 @@
     font-size: 14px;
     font-weight: 500;
 }
-.Degree span{
-    color: #352f2a97;
+
+.Degree span {
+    color: var(--primary_bg);
     font-size: 90%;
 }
 
 .skills {
-    background-color: #F8FBFB;
+    background-color: var(--bg_tern);
+    color: var(--c_detain_gen);
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -75,7 +79,7 @@
 
 .skills-container span {
     padding: 0.3rem 0.7rem;
-    background-color: #E1E8EF;
+    background-color: var(--primary_bg);
     border-radius: 8px;
     margin: 0.5rem;
 }
@@ -106,38 +110,43 @@
         padding: 1rem 1rem;
     }
 
-    .res__body__education{
+    .res__body__education {
         height: 100%;
         border-radius: 8px 8px 0 0;
     }
-    .edication{
+
+    .edication {
         margin-right: 0;
     }
 
     .work__skill {
         padding-right: 0;
     }
+
     .soft__skill {
         padding-left: 0;
     }
 }
+
 @media screen and (max-width: 1000px) {
     .res__edu {
         gap: 1rem;
         padding: 1rem 1rem;
     }
 
-    .res__body__education{
+    .res__body__education {
         height: 100%;
         border-radius: 8px 8px 0 0;
     }
-    .edication{
+
+    .edication {
         margin-right: 0;
     }
 
     .work__skill {
         padding-right: 0;
     }
+
     .soft__skill {
         padding-left: 0;
     }

@@ -1,6 +1,10 @@
+
+
 .about__body {
     margin: 0;
     padding: 1rem 3rem;
+    background-color: var(--f_color_d);
+    color: var(--c_detain_gen);
 }
 
 .about__text {
@@ -9,7 +13,7 @@
 
 .work__catelog {
     display: grid;
-    background-image: url("../../public/images/contactbg.jpg");
+    background-image: var(--about_cat_bg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1rem 3rem;
@@ -23,9 +27,9 @@
 .catelog__item {
     border-radius: 10px;
     background: transparent;
-    color: #F2F7FC;
+    color: var(--img_txt);
     backdrop-filter: blur(7px);
-    border: 2px solid #0000002e;
+    border: 2px solid var(--border_light);
     padding: 1.3rem 0 0 1.5rem;
 }
 
