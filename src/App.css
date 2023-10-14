@@ -140,6 +140,7 @@ header {
 .h__dark_logo {
   height: 50px;
   width: 50px;
+  cursor: pointer;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -151,6 +152,7 @@ header {
 .h__dark_logo img {
   height: 30px;
   width: 30px;
+  cursor: pointer;
 }
 
 /* Header Styles */
@@ -387,7 +389,7 @@ header {
 
   .gen__head_comp {
     align-items: center;
-    width: 460px;
+    width: fit-content;
   }
 
   .gen__head_comp h2 {

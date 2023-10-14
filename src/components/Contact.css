@@ -205,6 +205,7 @@
     .contact__bottom {
         margin-top: auto;
         height: auto;
+        border-radius: 0 0 15px 15px;
     }
 
     .c__b__right {

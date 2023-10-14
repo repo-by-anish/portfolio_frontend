@@ -33,7 +33,7 @@ const Work = ({ animStyle }) => {
 
     return (
         <div className={animStyle + " work__body"}>
-            <div style={{ padding: "1rem 3rem" }} className="gen__head_comp">
+            <div style={{ padding: "1rem 0rem 1rem 3rem" }} className="gen__head_comp">
                 <h2>Projects</h2>
                 <span></span>
             </div>
