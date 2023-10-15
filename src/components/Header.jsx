@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive"
+import {BsFillMoonStarsFill} from "react-icons/bs"
+import {FaSun} from "react-icons/fa"
 
-const moon = "logos/modes/moon.svg"
-const sun = "logos/modes/sun.svg"
+const moon = <BsFillMoonStarsFill color="gray" size={"1.5rem"}/>
+const sun = <FaSun color="var(--primary_bg_light)" size={"1.5rem"}/>
 
 const Header = () => {
     const [scrModeDark, setScrModeDark] = useState(true);
@@ -32,7 +34,7 @@ const Header = () => {
                 Anish <span>Kumar</span>
             </p>
             <p onClick={onModeChange} className="h__dark_logo">
-                <img src={scrModeDark ? moon : sun} alt="dark_logo" />
+            {scrModeDark ? moon : sun}
             </p>
         </header>
     )
