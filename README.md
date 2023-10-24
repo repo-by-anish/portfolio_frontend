@@ -7,8 +7,6 @@ This is a simple portfolio website created using React. It showcases information
 - [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Demo

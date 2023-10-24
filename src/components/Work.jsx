@@ -25,6 +25,30 @@ const Work = ({ animStyle }) => {
             c_img: "images/project/fc.png",
             c_link: "https://flipkart-clone2.netlify.app/"
         },
+        {
+            c_name: "Dashboard Design",
+            c_desc: "NA",
+            c_img: "images/project/dash.png",
+            c_link: "https://super-cannoli-8f670f.netlify.app/"
+        },
+        {
+            c_name: "Resturant Profile (FLAVORSOME DELIGHTS) ",
+            c_desc: "NA",
+            c_img: "images/project/restr.png",
+            c_link: "https://admirable-semolina-cd106b.netlify.app/"
+        },
+        {
+            c_name: "Online Quiz Creator",
+            c_desc: "NA",
+            c_img: "images/project/quiz.png",
+            c_link: "https://quizcreate.netlify.app/"
+        },
+        {
+            c_name: "Drawing App Using Canvas",
+            c_desc: "NA",
+            c_img: "images/project/draw.png",
+            c_link: "https://drawing-app-using-canvas.netlify.app/"
+        },
     ];
 
     // const handleDrop=(dropItem)=>{
