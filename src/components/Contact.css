@@ -48,6 +48,7 @@
     font-family: 'poppins', sans-serif;
     line-height: 30px;
     padding: 0;
+    color: var(--primary_bg_dark);
 }
 
 .contact__bottom {
@@ -137,12 +138,14 @@
 .c__b__right input:focus,
 .c__b__right textarea:focus {
     outline: none;
+    color: rgb(160, 160, 160);
 }
 
 .c__b__right input,
 .c__b__right textarea {
     height: 1.5rem;
     background: none;
+    caret-color: #6a7073;
     border: none;
     font-size: 1rem;
     color: var(--f_color_d);

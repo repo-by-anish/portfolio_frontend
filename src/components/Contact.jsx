@@ -66,8 +66,8 @@ const Contact = ({ animStyle }) => {
             <div className="contact__top">
                 <div className="contact__item">
                     <p className="c_heading"><BiSolidPhoneCall color="#EF330B" size={"1.6rem"} />Email:</p>
-                    <p className="c_content">contact.anish7@gmail.com</p>
-                    <p className="c_content">it.20203061@gmail.com</p>
+                    <a href="mailto:contact.anish7@gmail.com" className="c_content">contact.anish7@gmail.com</a>
+                    <a href="mailto:contact.anish7@gmail.com" className="c_content">it.20203061@gmail.com</a>
                 </div>
                 <div className="contact__item">
                     <p className="c_heading"><HiOutlineMail color="#EF330B" size={"1.6rem"} />Phone:</p>

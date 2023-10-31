@@ -60,6 +60,8 @@
 @media screen and (max-width: 400px){
     .work__body{
         border-radius: 8px;
+        height: max-content;
+        padding: 1rem 1rem;
     }
     .project_item {
         width: min-content;
