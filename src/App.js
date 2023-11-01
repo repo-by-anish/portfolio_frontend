@@ -5,6 +5,7 @@ import MainBody from './components/MainBody';
 import axios from "axios"
 import { BrowserRouter as Router } from "react-router-dom"
 import RespContext from './components/RespContext';
+import Footer from './components/Footer';
 const BASE_URI = "https://portfolio-backend-1.onrender.com/message"
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <RespContext.Provider value={sResp}>
           <Header />
           <MainBody />
+          <Footer/>
         </RespContext.Provider>
       </main>
     </Router>

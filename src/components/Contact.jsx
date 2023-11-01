@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import "./Contact.css"
 import { AiOutlineSend } from "react-icons/ai"
+import { Link } from "react-router-dom"
 import { BiSolidPhoneCall } from "react-icons/bi"
 import { HiOutlineMail } from "react-icons/hi"
 import axios from "axios"
@@ -11,7 +12,7 @@ const Contact = ({ animStyle }) => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [buttonStatus, setButtonState] = useState(false)
-    const sResp=useContext(RespContext);
+    const sResp = useContext(RespContext);
     console.log(sResp);
     // Icons Names
     const sendIcon = <AiOutlineSend style={{ marginLeft: "5px" }} />
@@ -61,18 +62,18 @@ const Contact = ({ animStyle }) => {
     }
 
     return (
-        <div className={animStyle+" conatct__body"}>
+        <div className={animStyle + " conatct__body"}>
             {loading}
             <div className="contact__top">
                 <div className="contact__item">
                     <p className="c_heading"><BiSolidPhoneCall color="#EF330B" size={"1.6rem"} />Email:</p>
-                    <a href="mailto:contact.anish7@gmail.com" className="c_content">contact.anish7@gmail.com</a>
-                    <a href="mailto:contact.anish7@gmail.com" className="c_content">it.20203061@gmail.com</a>
+                    <Link to="mailto:contact.anish7@gmail.com" className="c_content">contact.anish7@gmail.com</Link>
+                    <Link to="mailto:contact.anish7@gmail.com" className="c_content">it.20203061@gmail.com</Link>
                 </div>
                 <div className="contact__item">
                     <p className="c_heading"><HiOutlineMail color="#EF330B" size={"1.6rem"} />Phone:</p>
-                    <p className="c_content">+91-62065 73987</p>
-                    <p className="c_content">+91-62065 73987</p>
+                    <Link to="tel:+91-62065 73987" className="c_content">+91-62065 73987</Link>
+                    <Link to="tel:+91-62065 73987" className="c_content">+91-62065 73987</Link>
                 </div>
             </div>
             <div className="contact__bottom">

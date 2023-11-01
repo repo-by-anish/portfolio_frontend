@@ -4,3 +4,16 @@ body {
   background-color: var(--main_body);
   font-family: 'Raleway';
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--footer_bg);
+  color: var(--footer_txt);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Raleway';
+  letter-spacing: 1px;
+}
